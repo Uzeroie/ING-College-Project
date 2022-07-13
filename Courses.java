@@ -3,44 +3,50 @@ public class Courses
   {
     // Attributes of class Courses//
   private String courseID;
-  private String course_name;
-  private String course_leader;
-  private int course_duration;
+  private String coursename;
+  public String courseleader;
+  private int courseduration;
 
   // Constructors//
-      public Courses ( String courseID, String course_name, int course_duration) 
+      public Courses ( String courseID, String coursename, int courseduration) 
   {
     this.courseID = courseID;
-    this.course_name = course_name;
-    this.course_duration = course_duration;
-    this.course_leader = ""; // Here, setting course_leader as empty//
+    this.coursename = coursename;
+    this.courseduration = courseduration;
+    this.courseleader = ""; // Here, setting course_leader as empty//
   }
 
 
   // Getter for courseID//
   public String getcourseID ()
   {
-      return courseID;
+      return this.courseID;
   }
 
   // Getter for course_name//
-  public String getcourse_name ()
+  public String getcoursename ()
   {
-      return course_name;
+      return this.coursename;
   }
 
   // Getter for course_duration//
-  public int getcourse_duration ()
+  public int getcourseduration ()
   {
-      return course_duration;
+      return this.courseduration;
   }
   
 
   // Setter for course_duration//
-  public void setcourse_leader (String course_leader)
+  public void setcourseleader (String course_leader)
   {
-      this.course_leader = course_leader;
+      this.courseleader = courseleader;
   }
+  
+  //Getter for courseLeader//
+  public String getcourseleader()
+  {
+      return courseleader;
+    }
 
   // Method of displaying data //
   public void display()
@@ -48,13 +54,12 @@ public class Courses
      // Displaying the Header//
      System.out.println("\t\t COURSES DETAIL");
      System.out.println( "Course ID=" + courseID);
-     System.out.println( "Course name=" + course_name);
-     System.out.println( "Course duration=" + course_duration);
+     System.out.println( "Course name=" + coursename);
      
      // Display course_leader if it's not empty//
-     if (this.course_leader!="")
+     if (this.courseleader!="")
      {
-         System.out.println( "Course leader=" + course_leader);
+         System.out.println( "Course leader=" + courseleader);
         }
 
   } 
